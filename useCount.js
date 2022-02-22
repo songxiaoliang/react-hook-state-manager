@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import createContainer from "./createContainer";
 
 function useCount() {
-  const [count, setCount] = React.useState(0);
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count - 1);
+  const [number, setNumber] = useState(0);
+  const increment = () => setCount(number + 1);
+  const decrement = () => setCount(number - 1);
   return { count, increment, decrement };
 }
 
